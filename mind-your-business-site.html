@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mind Your Own Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Fira Code", monospace;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1f1f1f 100%);
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+
+    .header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #ff6b6b;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      animation: slideDown 1s ease-in-out;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      color: #e0e0e0;
+    }
+
+    .typewriter {
+      font-size: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+    }
+
+    .cursor {
+      display: inline-block;
+      color: #ff6b6b;
+      margin-left: 4px;
+      animation: blink 0.7s infinite;
+    }
+
+    .content {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 107, 107, 0.1);
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: #ff6b6b;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .example-box {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-left: 4px solid #ff6b6b;
+    }
+
+    .wrong {
+      border-left-color: #ff6b6b;
+    }
+
+    .right {
+      border-left-color: #888;
+    }
+
+    .conversation {
+      font-family: monospace;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .message {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .person1 {
+      background: rgba(255, 107, 107, 0.15);
+      text-align: left;
+    }
+
+    .person2 {
+      background: rgba(136, 136, 136, 0.15);
+      text-align: right;
+    }
+
+    .explanation {
+      font-size: 1rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      color: #e0e0e0;
+    }
+
+    .emoji {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .footer a {
+      color: #ff6b6b;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      background: rgba(255, 107, 107, 0.2);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: #ff6b6b;
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2.5rem;
+      }
+      
+      .typewriter {
+        font-size: 1.2rem;
+      }
+      
+      .content {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">Mind Your Own Business</h1>
+    <p class="subtitle">A gentle reminder about personal boundaries</p>
+    <div class="typewriter">
+      <span class="typewriter-text"></span><span class="cursor">|</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <h2 class="section-title">❌ Don't Do This</h2>
+      <div class="example-box wrong">
+        <div class="conversation">
+          <div class="message person1">Sarah: "So when are you getting married?"</div>
+          <div class="message person2">Alex: "Um... we haven't really discussed it..."</div>
+          <div class="message person1">Sarah: "But you've been together for 2 years! What's taking so long?"</div>
+          <div class="message person2">Alex: "It's complicated..."</div>
+          <div class="message person1">Sarah: "Are you sure they're the right person for you?"</div>
+        </div>
+      </div>
+      <div class="explanation">
+        Notice how Sarah keeps pushing despite Alex's obvious discomfort. This creates awkwardness and can damage relationships. Alex didn't ask for relationship advice or pressure about their timeline.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">✅ Try This Instead</h2>
+      <div class="example-box right">
+        <div class="conversation">
+          <div class="message person1">Sarah: "How are things going with you?"</div>
+          <div class="message person2">Alex: "Pretty good! Work's been busy but manageable."</div>
+          <div class="message person1">Sarah: "That's great to hear! Let me know if you need anything."</div>
+          <div class="message person2">Alex: "Thanks, I appreciate that!"</div>
+        </div>
+      </div>
+      <div class="explanation">
+        Sarah shows genuine interest without prying into personal details. She offers support without demanding information, creating a comfortable space for Alex to share what they want to share.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">🤔 Common Boundary Violations</h2>
+      <div class="explanation">
+        <p>These seemingly innocent questions can make people uncomfortable:</p>
+        <br>
+        <p><span class="highlight">"When are you having kids?"</span> - Maybe they can't, don't want to, or it's none of your business</p>
+        <p><span class="highlight">"Why are you still single?"</span> - Implies something's wrong with being single</p>
+        <p><span class="highlight">"How much do you make?"</span> - Financial details are personal</p>
+        <p><span class="highlight">"Why don't you drink?"</span> - Could be health, addiction, or personal reasons</p>
+        <p><span class="highlight">"Are you pregnant?"</span> - Never, ever ask this</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">🎯 The Solution</h2>
+      <div class="explanation">
+        <p><strong>Ask yourself first:</strong> "Do I need to know this information? Will knowing this actually help me support this person better?"</p>
+        <br>
+        <p><strong>If someone wants to share,</strong> they will. Your job is to be a safe person to share with, not an interrogator.</p>
+        <br>
+        <p><strong>Show interest without prying:</strong> "How are you doing?" is much better than "Why haven't you found a new job yet?"</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">🌟 When Done Right</h2>
+      <div class="explanation">
+        <p><span class="emoji">🤝</span> People feel respected and valued</p>
+        <p><span class="emoji">💬</span> Conversations flow naturally without pressure</p>
+        <p><span class="emoji">🛡️</span> You become a trusted friend, not a source of stress</p>
+        <p><span class="emoji">🌱</span> Relationships grow stronger through mutual respect</p>
+        <p><span class="emoji">🎉</span> Everyone wins when boundaries are respected!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>This is meant with love and good humor <span class="emoji">💝</span></p>
+    <p>Inspired by the wonderful <a href="https://nohello.net" target="_blank">NoHello.net</a></p>
+    <p>Remember: Curiosity is great, nosiness is not.</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const typewriterText = document.querySelector(".typewriter-text");
+
+      const lines = [
+        "Personal questions ≠ Personal connection",
+        "Respect boundaries, build better relationships",
+        "Curiosity is great, nosiness is not",
+        "Your business is yours, their business is theirs",
+        "Try it today: Ask less, listen more"
+      ];
+
+      let lineIndex = 0;
+      const typingSpeed = 80;
+      const linePauseTime = 2500;
+
+      function startTyping() {
+        const line = lines[lineIndex];
+        let charIndex = 0;
+        typewriterText.textContent = "";
+
+        function typeCharacter() {
+          if (charIndex < line.length) {
+            typewriterText.textContent += line.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeCharacter, typingSpeed);
+          } else {
+            setTimeout(() => {
+              lineIndex = (lineIndex + 1) % lines.length;
+              startTyping();
+            }, linePauseTime);
+          }
+        }
+
+        typeCharacter();
+      }
+
+      startTyping();
+    });
+  </script>
+</body>
+</html>
